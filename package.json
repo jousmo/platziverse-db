@@ -1,0 +1,46 @@
+{
+  "name": "platziverse-db",
+  "version": "0.0.0",
+  "description": "A Simple IoT Platform - DB Module",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index",
+    "dev": "nodemon",
+    "test": "nyc mocha -r dotenv/config ./tests/specs/**/*.spec.js --timeout 5000 --exit",
+    "lint": "eslint . --fix && echo '✔   Your .js files look good'",
+    "release": "standard-version",
+    "release:minor": "standard-version --release-as minor",
+    "release:patch": "standard-version --release-as patch",
+    "release:major": "standard-version --release-as major",
+    "prepare": "husky install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jousmo/platziverse-db.git"
+  },
+  "author": "José Uscanga <jousmo@outlook.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jousmo/platziverse-db/issues"
+  },
+  "homepage": "https://github.com/jousmo/platziverse-db#readme",
+  "dependencies": {
+    "dotenv": "^10.0.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^12.1.4",
+    "@commitlint/config-conventional": "^12.1.4",
+    "chai": "^4.3.4",
+    "eslint": "^7.31.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-mocha": "^9.0.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.1.0",
+    "husky": "^7.0.1",
+    "mocha": "^9.0.2",
+    "nodemon": "^2.0.12",
+    "nyc": "^15.1.0",
+    "standard-version": "^9.3.1"
+  }
+}
